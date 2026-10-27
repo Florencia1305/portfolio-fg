@@ -1,0 +1,290 @@
+/* ===== VARIABLES DE COLOR ===== */
+:root {
+    --negro: #111111;
+    --oliva: #6B8E23;
+    --oliva-oscuro: #556B2F;
+    --crema: #F4F1E8;
+    --texto: #222222;
+    --blanco: #FFFFFF;
+}
+
+/* ===== ESTILOS GENERALES ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: var(--texto);
+    background-color: var(--crema);
+}
+/* ===== PORTADA (HEADER) ===== */
+header {
+    background-color: var(--negro);
+    color: var(--blanco);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    padding: 25px 50px;
+}
+
+header nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header nav a:hover {
+    color: var(--oliva);
+}
+
+.portada {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.saludo {
+    color: var(--oliva);
+    font-size: 18px;
+    margin: 0;
+}
+
+.portada h1 {
+    font-size: 56px;
+    margin: 10px 0;
+}
+
+.profesion {
+    font-size: 22px;
+    border-bottom: 3px solid var(--oliva);
+    padding-bottom: 8px;
+    margin: 0;
+}
+/* ===== SECCIONES GENERALES ===== */
+section {
+    padding: 80px 50px;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-top: 0;
+}
+
+/* ===== SOBRE MÍ ===== */
+#sobre-mi {
+    background-color: var(--blanco);
+}
+
+.sobre-mi-contenido {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.foto-marco {
+    background-color: var(--oliva);
+    padding: 25px;
+    flex-shrink: 0;
+}
+
+.foto-marco img {
+    width: 280px;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sobre-mi-texto h2 {
+    color: var(--negro);
+}
+
+.sobre-mi-texto h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.rol {
+    color: var(--oliva-oscuro);
+    font-weight: bold;
+    margin: 5px 0 20px;
+}
+
+.sobre-mi-texto p {
+    line-height: 1.6;
+}
+/* ===== PROYECTOS ===== */
+#proyectos {
+    background-color: var(--crema);
+}
+
+#proyectos h2,
+.subtitulo {
+    text-align: center;
+}
+
+.subtitulo {
+    margin-top: -10px;
+    margin-bottom: 50px;
+}
+
+.tarjetas {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    flex: 1;
+    min-width: 250px;
+    background-color: var(--blanco);
+    padding: 30px;
+    border-top: 5px solid var(--oliva);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+    color: var(--negro);
+}
+
+.tarjeta p {
+    line-height: 1.6;
+}
+
+.tecnologias {
+    color: var(--oliva-oscuro);
+    font-weight: bold;
+    font-size: 14px;
+}
+.boton {
+    display: inline-block;
+    background-color: var(--oliva);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.boton:hover {
+    background-color: var(--oliva-oscuro);
+}
+/* ===== SKILLS TÉCNICAS ===== */
+#skills-tecnicas {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+#skills-tecnicas h2,
+#skills-tecnicas .subtitulo {
+    text-align: center;
+}
+
+.grupos-skills {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.grupo-skills {
+    border: 1px solid var(--oliva);
+    padding: 25px;
+}
+
+.grupo-skills h3 {
+    color: var(--oliva);
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.grupo-skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.grupo-skills li {
+    padding: 8px 0;
+    border-bottom: 1px solid #333333;
+}
+
+.grupo-skills li:last-child {
+    border-bottom: none;
+}
+/* ===== SKILLS BLANDAS ===== */
+#skills-blandas {
+    background-color: var(--crema);
+}
+
+#skills-blandas h2 {
+    text-align: center;
+}
+
+#skills-blandas .tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+/* ===== CONTACTO ===== */
+#contacto {
+    background-color: var(--blanco);
+}
+
+#contacto h2 {
+    text-align: center;
+}
+
+.contacto-datos {
+    max-width: 500px;
+    margin: 0 auto;
+    border-left: 5px solid var(--oliva);
+    padding-left: 25px;
+}
+
+.contacto-datos p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contacto-datos a {
+    color: var(--oliva-oscuro);
+}
+
+.contacto-datos a:hover {
+    color: var(--oliva);
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
